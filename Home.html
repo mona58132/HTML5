@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>STARS System</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="css/Content/bootstrap.css" rel="stylesheet">
+
+    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/jcarousel.css" rel="stylesheet" />
+    <link href="css/flexslider.css" rel="stylesheet" />
+    <!--link href="css/style.css" rel="stylesheet" /-->
+    <!-- Theme skin -->
+    <!--link href="skins/default.css" rel="stylesheet" /-->
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+   <script type="text/javascript">
+       function readCookie(name) {
+           var i, c, ca, nameEQ = name + "=";
+           ca = document.cookie.split(';');
+           for (i = 0; i < ca.length; i++) {
+               c = ca[i];
+               while (c.charAt(0) == ' ') {
+                   c = c.substring(1, c.length);
+               }
+               if (c.indexOf(nameEQ) == 0) {
+                   return c.substring(nameEQ.length, c.length);
+               }
+           }
+           return '';
+       }
+       window.onload = function CheckCookie() {
+           if (readCookie('Role') == '1') //Check instructor
+               document.getElementById('linkStudent2').style.display = 'none';
+           else //check Advisor and Coordinator
+               document.getElementById('linkStudent1').style.display = 'none';
+
+       }
+   </script>
+
+</head>
+<body>
+    <!--Top Menu-->
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="Home_Inst.html" class="navbar-brand">STARS</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            
+            <div class="navbar-collapse collapse" id="navbar-main">             
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Login.html">Log out</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <!--End-->
+    <!--Content-->
+    <section id="featured">
+        <div class="container">
+           
+            <div class="page-header" id="banner">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Slider -->
+                        <div id="main-slider" class="flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <img src="img/slides/1.jpg" alt="" />
+
+                                </li>
+                                <li>
+                                    <img src="img/slides/2.jpg" alt="" />
+
+                                </li>
+                                <li>
+                                    <img src="img/slides/3.jpg" alt="" />
+
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end slider -->
+                    </div>
+                </div>
+
+                <!--Header-->
+
+
+            <!--End Header-->
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="page-header">
+                            Welcome to STARS System
+                        </h2>
+                    </div>
+                 </div>
+                    <div class="col-lg-offset-1 row">
+                        <div class="col-md-4">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Students At Risk</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <p>You can view the students who are at risk and assign an action for them by selecting one or more students and click on "Add Action" button. It helps the University to track students who are at risk</p>
+                                    <a id="linkStudent1" href="Instr_ListOfStudents.html" class="col-lg-offset-4 btn btn-primary">List Students</a>
+                                    <a id="linkStudent2" href="ListOfStudents.html" class="col-lg-offset-4 btn btn-primary">List Students</a>
+                                </div>
+                            </div>
+                        </div>
+                  <div class="col-lg-2"></div>
+                    <div class="col-md-4">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">View Actions</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p>You can view the actions done by you or other Instructor, advisors and coordinator for the students at RISK. You can choose a certain student or navigate between all the students </p>
+                                <a href="View_Actions.html" class="col-lg-offset-4 btn btn-primary">View Actions</a>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                    <hr />
+                    <!-- Footer -->
+                    <footer>
+                        <div class="row">
+                            <div class="col-lg-offset-5">
+                                <p>Copyright &copy; STARS 2015</p>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        <!--End Container-->
+</section>
+  
+
+
+    <!-- javascript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/jquery.fancybox-media.js"></script>
+    <script src="js/google-code-prettify/prettify.js"></script>
+    <script src="js/portfolio/jquery.quicksand.js"></script>
+    <script src="js/portfolio/setting.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
